@@ -26,6 +26,19 @@ This app is equipped with all the wonderful features of an electron app, includi
 ## Credits
 The Libby icon was taken from this page for use as the app icon: https://www.overdrive.com/apps/libby/
 
+The `libby-mascot.ico` was created using ImageMagick, by running:
+
+```bash
+convert -background transparent "libby-mascot.png" -define icon:auto-resize=16,24,32,48,64,72,96,128,256 "libby-mascot.ico"
+```
+
+The `libby-mascot.icns` was created using from an  higher resolution PNG of the SVG and then converted to icns with:
+
+```bash
+sips -s format icns -z 1024 1024 libby-mascot.iconset/libby-mascot_512x512@2x.png -o libby-mascot.icns
+```
+
+
 **Disclaimer: Libby is in no way, shape, or form the work of Spiffily Software. This app is only a simple electron package to allow you to read in a sort of desktop app.**
 
 </div>
