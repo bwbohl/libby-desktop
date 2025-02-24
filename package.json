@@ -59,7 +59,13 @@
       "icon": "./assets/libby-mascot.png",
       "executableName": "libby-desktop",
       "target": [
-        "AppImage"
+        {
+          "target": "appImage",
+          "arch": [
+            "x64",
+            "armv7l"
+          ]
+        }
       ]
     },
     "win": {
