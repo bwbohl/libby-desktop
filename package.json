@@ -1,9 +1,16 @@
 {
   "name": "libby-desktop",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "GPL-3.0-or-later",
   "description": "A simple Electron app to come as close as possible to providing a Linux desktop app for Libby.",
   "author": "Spiffily Software <sillynoodle36@gmail.com> (https://spiffily.github.io)",
+  "contributors": [
+    {
+      "name": "Benjamin W. Bohl",
+      "email": "b.w.bohl@gmail.com",
+      "url": "https://github.com/bwbohl"
+    }
+  ],
   "main": "index.js",
   "scripts": {
     "postinstall": "install-app-deps",
@@ -26,7 +33,7 @@
   "build": {
     "appId": "io.github.spiffily.libby",
     "productName": "Libby Desktop",
-    "copyright": "Copyright 2020 ${author}",
+    "copyright": "Copyright 2025 ${author} ${contributors}",
     "directories": {
       "buildResources": "."
     },
