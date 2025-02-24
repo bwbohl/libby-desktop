@@ -66,6 +66,7 @@
     }
   },
   "devDependencies": {
+    "@electron-forge/cli": "^7.7.0",
     "electron": "latest",
     "electron-builder": "latest"
   }
