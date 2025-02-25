@@ -25,14 +25,14 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v1
-        with:
-          node-version: 23
+      #- name: Install Node.js, NPM and Yarn
+      #  uses: actions/setup-node@v1
+      #  with:
+      #    node-version: 23
 
       - name: Build/release Electron app
-       #- uses: uraimo/run-on-arch-action@v2
-        uses: jsoma/action-electron-forge@v1.4.0
+        uses: uraimo/run-on-arch-action@v2
+        #uses: jsoma/action-electron-forge@v1.4.0
         with:
           arch: ${{ matrix.arch }}
           distro: ${{ matrix.distro }}
@@ -65,7 +65,7 @@ jobs:
             case "${{ matrix.distro }}" in
               ubuntu*|jessie|stretch|buster|bullseye)
                 apt-get update -q -y
-                apt-get install -q -y git 
+                apt-get install -q -y git nodejs
                 ;;
               fedora*)
                 dnf -y update
