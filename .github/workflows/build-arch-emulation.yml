@@ -50,7 +50,7 @@ jobs:
 
           # Pass some environment variables to the container
           env: | # YAML, but pipe character is necessary
-            artifact_name: git-${{ matrix.distro }}_${{ matrix.arch }}
+            artifact_name: libby-desktop_${{ matrix.distro }}_${{ matrix.arch }}
 
           # The shell to run commands with in the container
           shell: /bin/sh
@@ -79,11 +79,10 @@ jobs:
           
           # Produce a binary artifact and place it in the mounted volume
           run: |
-            cp $(which git) "/artifacts/${artifact_name}"
-            echo "Produced artifact at /artifacts/${artifact_name}"
-
+            npm install
+            npm run make
       - name: Show the artifact
         # Items placed in /artifacts in the container will be in
         # ${PWD}/artifacts on the host.
         run: |
-          ls -al "${PWD}/artifacts"
+          ls -la "${PWD}/out"
