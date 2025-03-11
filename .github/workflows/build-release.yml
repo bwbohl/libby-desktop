@@ -8,8 +8,8 @@ jobs:
 
     strategy:
       matrix:
-          #os: [macos-latest, ubuntu-24.04, windows-latest]
-          os: [ubuntu-24.04-arm]
+          os: [macos-latest, ubuntu-24.04, windows-latest]
+          #os: [ubuntu-24.04-arm]
 
     steps:
       - name: Check out Git repository
